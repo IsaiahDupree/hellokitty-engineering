@@ -98,16 +98,23 @@ async function main() {
       delete headers['oai-sites-authorization'];
       if (token) headers['OAI-Sites-Authorization'] = `Bearer ${token}`;
       // Do not use continue({headers}): Playwright can carry an override through
-      // redirects. Fetch exactly this origin once and refuse every redirect,
-      // so neither the browser nor the API client can forward the credential.
+      // redirects. Resolve bounded same-origin redirects explicitly; never let
+      // the client forward the credential to an unverified location.
       try {
-        const response = await route.fetch({headers, maxRedirects: 0, timeout: 30000});
-        if (response.status() >= 300 && response.status() < 400) {
+        let destination = url;
+        let response;
+        for (let hop = 0; hop < 4; hop++) {
+          response = await route.fetch({url: destination.href, headers, maxRedirects: 0, timeout: 30000});
+          if (response.status() < 300 || response.status() >= 400) break;
           const location = response.headers().location;
-          if (location) blockedOrigins.add(new URL(location, url).origin);
-          errors.push(`Unexpected redirect refused for ${url.pathname}`);
-          await route.abort('blockedbyclient');
-          return;
+          requireTrue(location, 'Redirect has no location');
+          const next = new URL(location, destination);
+          if (next.origin !== origin) {
+            blockedOrigins.add(next.origin);
+            throw new Error(`Cross-origin redirect refused for ${url.pathname}`);
+          }
+          requireTrue(hop < 3, 'Same-origin redirect limit exceeded');
+          destination = next;
         }
         await route.fulfill({response});
       } catch (error) {
