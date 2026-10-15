@@ -3,3 +3,10 @@
 @media(max-width:750px){.app{display:block}.sidebar{height:auto;position:static;padding:18px 20px}.sidebar small,.sidebar footer{display:none}.nav{display:flex;overflow:auto;gap:4px;margin-top:15px}.nav button{white-space:nowrap;padding:8px}.nav-num{display:none}.brand{font-size:15px}.main{padding:24px 18px}.topbar{height:55px;padding:0 20px}.top-right>span{display:none}.hero{grid-template-columns:1fr}.hero-img{order:-1;height:210px}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:24px}.heading{align-items:flex-start}.heading>.button{white-space:nowrap;margin-top:8px}.evidence-grid,.asset-grid,.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.legend{flex-wrap:wrap}.hero-copy h2{max-width:none}}
 
 .grid{align-items:start}.readiness{max-height:700px;overflow-y:auto}.asset-grid figure{min-width:0}.asset-grid p{line-height:1.6}
+
+.weather-chart{width:100%;height:auto;display:block}.weather-metrics dl{display:grid;grid-template-columns:1fr auto;gap:12px}.weather-metrics dt{color:#7d8a9a;font-size:11px}.weather-metrics dd{margin:0;font-weight:700}.toolbar label{display:grid;gap:6px}details>summary{cursor:pointer;color:#9f2d65;font-size:12px}
+
+/* Long diagnostic identifiers must wrap inside their grid track on phones. */
+.grid>*{min-width:0}
+.issue,.subsystem{grid-template-columns:minmax(0,1fr) auto}
+.issue>div,.subsystem>span:first-child{min-width:0;overflow-wrap:anywhere}
