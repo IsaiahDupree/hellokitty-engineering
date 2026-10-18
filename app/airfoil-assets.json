@@ -1,0 +1,92 @@
+{
+  "schema": "hellokitty-airfoil-dashboard-assets/v1",
+  "native_job_id": "mdl_81878862740d46eb",
+  "native_summary_sha256": "f05f6fde84f9abc8b132e5238f3e42f1fb510c7a4d83f707f44e50a8b47a4abf",
+  "source_sha256": "ce4252a8f9b02c015601b83c0a5f15df00917f243e71dfc043901ca3f98f2ebe",
+  "geometry_sha256": "358667b678a334e6972d9aee2b5bf32b9f406c5d67a63cdd3f7bcba978215708",
+  "configuration_sha256": "ebc8e57ed5276f3f7c1ead81e8f893402921ab3f0277ec04003ccceed119dd44",
+  "accepted_revision": "native-r4",
+  "images": [
+    {
+      "file": "airfoil-modular-exterior.png",
+      "label": "Airfoil aircraft exterior",
+      "sha256": "0b0494f8b502362100eaae3969c6535c816e8d1080e2979418ac3a24e2341076",
+      "bytes": 2237294,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-modular-exterior.png"
+    },
+    {
+      "file": "airfoil-modular-cutaway.png",
+      "label": "Open body and internal modules",
+      "sha256": "e2d2652b94805d763c95a57f0717613bbf3620e85884b48440f0b481588e1296",
+      "bytes": 2288075,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-modular-cutaway.png"
+    },
+    {
+      "file": "airfoil-modular-exploded.png",
+      "label": "Exploded assembly and removable parts",
+      "sha256": "d397efe9c87486c876731abcd50e8f034f4276ee91b14a719e54fefe8f52229d",
+      "bytes": 2265321,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-modular-exploded.png"
+    },
+    {
+      "file": "airfoil-native-sections.png",
+      "label": "Actual forward and aft airfoil sections",
+      "sha256": "661918819295e2a12dc39af7fe1d5f496ee7e6f32fe97821db8bd22132c9f1ac",
+      "bytes": 2144120,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-native-sections.png"
+    },
+    {
+      "file": "airfoil-avionics-keyed-module.png",
+      "label": "Keyed avionics module and fixed receivers",
+      "sha256": "0225d631881354c51e9989655a69698c8a9c3b674150693b3731d6b4d586afe6",
+      "bytes": 2190976,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/avionics-keyed-module.png"
+    }
+  ],
+  "downloads": [
+    {
+      "file": "airfoil-modular.FCStd",
+      "label": "Download editable FreeCAD assembly",
+      "sha256": "a586bb36f142a2b9c202f0b00d4ff7ad97289d51292b2bd11c3d05bb26a0e4d8",
+      "bytes": 6516376,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-modular.FCStd"
+    },
+    {
+      "file": "airfoil-modular.step",
+      "label": "Download complete STEP assembly",
+      "sha256": "418d4f4b07bd5ac76a3b9860c8292928b959ef360cd560a135fd4223c3ccec5e",
+      "bytes": 23366359,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/airfoil-modular.step"
+    },
+    {
+      "file": "airfoil-payload-module.step",
+      "label": "Download payload module STEP",
+      "sha256": "524399045ade130ea99dc78ba22dac0ed6075bafe3808b4c9accf3830d733b71",
+      "bytes": 235026,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/payload_module.step"
+    },
+    {
+      "file": "airfoil-battery-module-1.step",
+      "label": "Download forward battery module STEP",
+      "sha256": "9660a8327243937f793dd3ed67dde23b875715aaa2f589c5ff1f460645cfb56e",
+      "bytes": 37593,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/battery_module_1.step"
+    },
+    {
+      "file": "airfoil-battery-module-2.step",
+      "label": "Download aft battery module STEP",
+      "sha256": "6ea4eb5d9b68b3c8fe82b459673e1fe19382af089160b65c49060d15c3b61b9a",
+      "bytes": 38361,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/battery_module_2.step"
+    },
+    {
+      "file": "airfoil-avionics-module.step",
+      "label": "Download avionics module STEP",
+      "sha256": "ba2d2a3b9d3b22f625be425b3e754e6e40f540e5ae36fe280314db52e1064e88",
+      "bytes": 200694,
+      "source_path": "artifacts/airfoil-modular-cad/native-r4/out/avionics_module.step"
+    }
+  ],
+  "flight_ready": false,
+  "scope": "Actual accepted native CAD images and editable exports; geometry and service checks do not establish aerodynamic performance, physical fit or flight qualification."
+}
